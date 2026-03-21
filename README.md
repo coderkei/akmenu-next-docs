@@ -1,4 +1,4 @@
-# AKMenu-Next-Docs - https://coderkei.github.io
+# AKMenu-Next-Docs - https://coderkei.github.io/akmenu-next-docs'
 
 ## Description
 Documentation for AKMenu-Next. Originally hosted on [Sanrax Flashcart Guides](https://github.com/Sanrax/flashcart-guides).
