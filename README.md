@@ -4,7 +4,7 @@
 Documentation for AKMenu-Next. Originally hosted on [Sanrax Flashcart Guides](https://github.com/Sanrax/flashcart-guides).
 
 ## Contributing
-If you'd like to see a cart or specific piece of info added, you may create an issue with the request, or fork the repository and then submit a pull request for me to approve. Any help is welcome!
+If you'd like to add or change anything here you may create an issue with the request, or fork the repository and then submit a pull request for me to approve. Any help is welcome!
 
 This site uses Material-MKDocs as the base. The website is generated from all `.md` files found in the `docs` directory. To edit the contents of a page on the site, simply open and edit the corresponding markdown file.
 
