@@ -1,0 +1,59 @@
+site_name: AKMenu-Next Docs
+site_url: https://coderkei.github.io/akmenu-next-docs
+repo_name: coderkei/akmenu-next-docs
+repo_url: https://github.com/coderkei/akmenu-next-docs
+theme:
+  features:
+    - navigation.tabs
+    - content.tooltips
+  favicon: images/favicon.png
+  logo: images/akmenu.png
+  icon:
+    repo: fontawesome/brands/github
+  name: material
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default 
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+plugins:
+  - macros
+copyright: Created and maintained by coderkei
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/coderkei
+extra_css:
+  - stylesheets/extra.css
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
