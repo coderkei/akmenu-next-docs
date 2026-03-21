@@ -1,7 +1,7 @@
 site_name: AKMenu-Next Docs
 site_url: https://coderkei.github.io/akmenu-next-docs
-repo_name: coderkei/akmenu-next-docs
-repo_url: https://github.com/coderkei/akmenu-next-docs
+repo_name: coderkei/akmenu-next
+repo_url: https://github.com/coderkei/akmenu-next
 theme:
   features:
     - navigation.tabs
