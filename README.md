@@ -1,7 +1,7 @@
 # AKMenu-Next-Docs
 
 ## Description
-Documentation for AKMenu-Next. Originally hosted on [Sanrax Flashcart Guides](https://github.com/Sanrax/flashcart-guides).
+Documentation for [AKMenu-Next](https://github.com/coderkei/akmenu-next). Originally hosted on [Sanrax Flashcart Guides](https://github.com/Sanrax/flashcart-guides).
 
 ## Contributing
 If you'd like to add or change anything here you may create an issue with the request, or fork the repository and then submit a pull request for me to approve. Any help is welcome!
