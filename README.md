@@ -1,4 +1,4 @@
-# AKMenu-Next-Docs - https://coderkei.github.io/akmenu-next-docs'
+# AKMenu-Next-Docs
 
 ## Description
 Documentation for AKMenu-Next. Originally hosted on [Sanrax Flashcart Guides](https://github.com/Sanrax/flashcart-guides).
@@ -12,6 +12,5 @@ Syntax documentation can be found in the [Material-MKDocs reference pages.](http
 
 ## Building the Site
 1. Install Python and Material-MKDocs on your PC by following the "Installation" section of the [Material MKDocs wiki.](https://squidfunk.github.io/mkdocs-material/getting-started/)
-1. Install the macros plugin: `pip install mkdocs-macros-plugin`
 1. `git clone` the repository to your local PC.
 1. Change into the `akmenu-next-docs` directory, then run `mkdocs serve` to build and serve the site locally at localhost:8000.
