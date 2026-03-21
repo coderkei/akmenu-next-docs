@@ -115,7 +115,7 @@ title: Setting Up AKMenu-Next
 
     #### Running DSiWare (DSi & 3DS only)
 
-    Please see [this guide](/flashcart-guides/tutorials/dsiware/#__tabbed_1_4) for running DSiWare on a DSpico.
+    Please see [this guide](dsiware.md) for running DSiWare on a DSpico.
 
 === "Nintendo DSi"
 
