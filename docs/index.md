@@ -7,7 +7,7 @@ title: Home
 
 Welcome to the AKMenu-Next Documentation site. Please choose a section below for installing or configuring AKMenu-Next.
 
-## Cart Guides
+## AKMenu-Next Docs
 
 - [**Installing AKMenu-Next**](guides/akmenu-next.md)
 - [**Updating AKMenu-Next**](guides/akmenu-next.md)
