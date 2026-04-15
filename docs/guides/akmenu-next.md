@@ -35,7 +35,7 @@ title: Setting Up AKMenu-Next
     #### Pico-Loader
 
     If you would like to also use [Pico-Loader](https://github.com/LNH-team/pico-loader/) please follow the below steps, otherwise skip this section.
-    Please bear in mind that Pico-Loader currently lacks soft-reset and cheat support. Any bugs should be reported on the [Pico-Loader Issues Page](https://github.com/LNH-team/pico-loader/issues).
+    Please bear in mind that Pico-Loader currently lacks soft-reset. Any bugs should be reported on the [Pico-Loader Issues Page](https://github.com/LNH-team/pico-loader/issues).
 
     !!! warning
         Using the wrong version of Pico-Loader could damage your flashcard!
@@ -63,7 +63,7 @@ title: Setting Up AKMenu-Next
 
     1. If your flashcart is a DSTTi clone that requires additional boot files, check the `Supplementary DSTTi Clone Files` folder. You can check the [YSMenu compatibility list](https://www.flashcarts.net/ysmenu-compat-ext) to check which one you need. If the file you need is not there, you can make copies of the `TTMenu.dat` file from the `DSTT & DSTTi` folder and rename them accordingly.
 
-    #### Cheats (nds-bootstrap only)
+    #### Cheats
 
     1. If you'd like to be able to use cheats on your games, download a [cheat database.](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711)
     
@@ -95,7 +95,7 @@ title: Setting Up AKMenu-Next
 
     #### nds-bootstrap (Optional)
 
-    Install nds-bootstrap additionally if you wish to use Cheats & Soft reset. Please note that you won't benefit from some of the features offered by the DSpico if you choose to use nds-bootstrap.
+    Install nds-bootstrap additionally if you wish to use soft reset or a game not compatible with Pico-Loader. Please note that you won't benefit from some of the features offered by the DSpico if you choose to use nds-bootstrap.
 
     1. Download the latest release of [nds-bootstrap.](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip)
 
@@ -107,7 +107,7 @@ title: Setting Up AKMenu-Next
 
     You can now load `BOOT.NDS` from Pico-Launcher kernel, or alternatively autoboot by using the `_picoboot.nds` file.
 
-    #### Cheats (nds-bootstrap only)
+    #### Cheats
 
     1. If you'd like to be able to use cheats on your games, download a [cheat database.](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711)
     
