@@ -12,5 +12,6 @@ Welcome to the AKMenu-Next Documentation site. Please choose a section below for
 - [**Installing AKMenu-Next**](guides/akmenu-next.md)
 - [**Updating AKMenu-Next**](guides/akmenu-next.md)
 - [**Running DSiWare in AKMenu-Next (DSpico Only)**](guides/dsiware.md)
+- [**Plugins**](guides/plugins.md)
 
 &nbsp;
