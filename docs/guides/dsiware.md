@@ -10,7 +10,7 @@ title: Running DSiWare On AKMenu-Next
 
     This only works if your DSpico with AKMenu-Next is running on a DSi or 3DS system. It will not load DSiWare on the Original NDS or DS Lite, since those consoles are missing the upgraded DSi hardware for running DSi-mode apps.
 
-1. Download the [DSpico BIOS and NAND dumper utility.](https://git.deletecat.com/Deletecat/pico_file_dump/releases/download/latest/pico_file_dump.nds)
+1. Download the [DSpico BIOS and NAND dumper utility.](https://files.deletecat.com/projects/pico_file_dump/current/pico_file_dump.nds)
 
 1. Place `pico_file_dump.nds` on your DSpico's SD card root.
 
