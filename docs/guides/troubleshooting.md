@@ -6,19 +6,15 @@ title: Troubleshooting
 
 If you encounter issues when using AKMenu-Next, please refer to the below information:
 
-#### The menu loads with just a black screen and a cursor
+#### I get a screen telling me no themes are installed.
 
- - You have an incompatible or improperly installed theme, or the `_nds` folder is missing. Try reinstalling the theme (you may need to edit the name of the theme to the correct folder name in `_nds/akmenunext/globalsettings.ini`) or reinstalling AKMenu-Next from the [Installing AKMenu-Next](../guides/akmenu-next.md) page.
-
-#### The menu loads but the bottom screen has no icons or text
-
-- An error occured trying to read from the SD card. This can sometimes occur by using the wrong version of AKMenu-Next (such as using the DSi version on the DSpico). Please ensure the SD card is fully working and that you have the correct version of AKMenu-Next installed.
+ - You do not have any valid or compatible themes installed. Try reinstalling the theme or reinstalling AKMenu-Next from the [Installing AKMenu-Next](../guides/akmenu-next.md) page.
 
 #### I get "Loader not found" when trying to run games
 
 - You don't have the files for the chosen loader installed, please switch to another loader in the settings, or install the corresponding loader's files. The guides for both compatible loaders (nds-bootstrap and Pico-Loader) are listed on the [Installing AKMenu-Next](../guides/akmenu-next.md) page.
 
-#### I get a message telling me to reinstall AKMenu-Next
+#### I get a message telling me files are missing or corrupt and to reinstall AKMenu-Next
 
 - Your installation of AKMenu-Next is corrupted or important configuration files are missing. This can sometimes be caused by a failing SD card as well. Please [test your SD card](https://www.flashcarts.net/microsd-fakes#testing-a-microsd-card) with **H2TestW** or **F3** and reinstall AKMenu-Next from the [Installing AKMenu-Next](../guides/akmenu-next.md) page.
 
