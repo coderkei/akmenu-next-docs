@@ -6,12 +6,12 @@ title: Themes
 
     AKMenu-Next supports Acekard/AKAIO themes, Wood R4 themes, and themes made for AKMenu-Next.
 
-    1. Open the [Wood R4/AKMenu Theme Repository](https://themes.flashcarts.net/akmenu/) and download a theme.
+    1. For AKmenu-Next themes, open the [AKMenu-Next Theme Repository](https://themes.flashcarts.net/aknext/). For legacy Acekard/AKAIO/Wood R4 themes, open the [Wood R4/AKMenu Theme Repository](https://themes.flashcarts.net/akmenu/) and download a theme.
     2. Open the `.7z` archive with an extractor such as [7-Zip](https://7-zip.org/).
     3. Copy the theme folder from the archive to `_nds/akmenunext/ui` on your SD card.
     4. Put the SD card back in your flashcart or console and start AKMenu-Next.
-    5. Press `START`, choose **Settings**, and select the theme you installed.
-    6. Press **A** to save, then press **A** again to restart with the theme.
+    5. Press `START`, choose **Themes**, and select the theme you installed.
+    6. Press **A** to set the theme, then press **X** to save the theme, then press **A** again to restart with the theme.
 
     !!! warning "Check the folder path"
         The theme folder must sit directly inside `_nds/akmenunext/ui`. For example, a theme named `HatsuneMiku` should be at:
