@@ -1,0 +1,6 @@
+:root {
+  --md-primary-fg-color:        #5FA8D3; /* main akmenu blue */
+  --md-primary-fg-color--light: #8EC6E8; /* lighter gradient highlight */
+  --md-primary-fg-color--dark:  #3E7FA8; /* deeper text/edge blue */
+  --md-accent-fg-color:         #4FA3D1; /* accent for links/buttons */
+}
