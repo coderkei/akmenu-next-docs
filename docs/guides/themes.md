@@ -150,9 +150,13 @@ title: Themes
 
     If a cover BMP has four or more entirely black or transparent columns along its right edge, those columns are clipped. Some images from Pico-Cover use this convention.
 
-    ## Theme music (`bgm.wav` or `bgm.bcstm`)
+    ## Theme music (WAV and BCSTM)
 
-    Add a `bgm.wav` or `bgm.bcstm` file to the theme folder alongside its images, for example `_nds/akmenunext/ui/blue skies/bgm.wav`. AKMenu-Next plays the track in a loop while the menu is open. **Interface settings → Theme music** controls playback. For BCSTM files with a specified loop point, the music will loop at that point. If both files are present, the .bcstm file is played.
+    Place music files in the theme directory alongside its theme images. The player looks for `bgm.bcstm`, `bgm.wav`, and numbered variants from `bgm1` through `bgm9` with either extension.
+
+    When menu music starts, the player selects one available file at random and loops it. Each file counts separately, so a theme can have up to 10 `.bcstm` and 10 `.wav` files, for a total of 20 songs. If a `.bcstm` and `.wav` share a number, either may be selected. Unplayable files are skipped in favor of another available file.
+
+    **Interface settings → Theme music** can enable or disable playback. For BCSTM files with a specified loop point, the music loops at that point.
 
     Use uncompressed RIFF/WAVE PCM audio in **16-bit signed, 22,050 Hz, mono** format. Audacity and FFmpeg can export audio in this format.
 

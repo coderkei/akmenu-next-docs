@@ -35,4 +35,8 @@ Plugins allow AKMenu-Next to be extended to launch other filetypes including Emu
 
     #### Icons
 
-    - Icons are located in `_nds/akmenunext/plugins/icons` and are standard Nintendo DS banner files. They should be named as `{Extension}.bin` so that they are loaded when the accompanying extension is loaded. If the icon is missed or invalid, AKMenu-Next will fallback to the default placeholder icon for that extension.
+    - Extension-level icons go in `_nds/akmenunext/plugins/icons` as standard Nintendo DS banner files named `{Extension}.bin`. AKMenu-Next uses the icon for files with that extension. If no usable extension icon exists, it uses the default placeholder.
+
+    #### Per-file banners
+
+    To give an individual file its own banner, place a standard Nintendo DS banner file in the same folder and append `.bin` to the complete filename. For example, `Mario.nds` uses `Mario.nds.bin`, and `Pokemon.gbc` uses `Pokemon.gbc.bin`. A per-file banner takes precedence over the ROM's embedded banner or the extension-level icon. This works for any file shown in the file browser. Files such as `.gbc` must be enabled by a plugin or shown with **Show all files**.
