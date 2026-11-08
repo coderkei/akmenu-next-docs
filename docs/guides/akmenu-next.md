@@ -1,315 +1,312 @@
 ---
-title: Setting Up AKMenu-Next
+title: Installing AKMenu-Next
 ---
 
 ![AKMenu-Next](../images/akmenu.png){ align=right width="200"}
-# Setting Up AKMenu-Next
+# Installing AKMenu-Next
 
 !!! info
-    
-    [AKMenu-Next](https://github.com/coderkei/akmenu-next) is a frontend for nds-bootstrap & Pico-Loader based on a fork of [akmenu4](https://github.com/lifehackerhansol/akmenu4) for running Nintendo DS Software & Homebrew. It supports cheats along with support for Acekard themes.
-    For controls such as soft-reset and quitting games, please see [nds-bootstrap controls](https://wiki.ds-homebrew.com/nds-bootstrap/controls)
 
-### Setup Guide:
+    [AKMenu-Next](https://github.com/coderkei/akmenu-next) is an enhanced, actively developed take on the Acekard/Wood menu (forked from [akmenu4](https://github.com/lifehackerhansol/akmenu4)) that runs Nintendo DS software & homebrew through nds-bootstrap & Pico-Loader. It adds DSiWare support, cheats, plugins, per-game settings and an upgraded theme system with game covers and music, while still supporting Acekard/Wood themes.
+    For in-game controls such as soft-reset, see the [nds-bootstrap controls page](https://wiki.ds-homebrew.com/nds-bootstrap/controls).
+
+Pick the tab for your setup below. Not sure which one you need? There's a table on the [home page](../index.md#which-version-do-i-need).
+
+!!! tip "Before you start"
+
+    - You'll need [7-Zip](https://www.7-zip.org/) (or any extractor that handles `.zip` and `.7z`).
+    - Use a decent, genuine SD card. A lot of "corrupted files" and "theme missing" problems turn out to be fake or dying cards, so if your card is new it's worth [testing it](https://www.flashcarts.net/microsd-fakes#testing-a-microsd-card) first.
+    - All the paths in this guide are from the **root** of your SD card, i.e. the top level, not inside another folder.
+
+### Setup Guide
 
 === "Flashcarts"
 
     #### Installing AKMenu-Next Flashcart Edition
 
-    1. Download the latest release of [AKMenu-Next Flashcart Edition.](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-flashcart.zip)
+    1. Download the latest release of [AKMenu-Next Flashcart Edition](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-flashcart.zip).
 
     1. Extract the downloaded `akmenu-next-flashcart.zip` file with [7-Zip](https://www.7-zip.org/).
 
-    1. From within the AKMenu-Next files, copy the following files/folders to your SD card root:
+    1. Copy the following files/folders to the root of your SD card:
 
         - `_nds` folder
         - `_pico` folder
         - `BOOT.NDS`
 
-    !!! warning "Soft-Reset Not Supported for Pico-Loader"
+        !!! warning "Already using TWiLight Menu++ or another menu?"
 
-        Note that Pico-Loader inside AKMenu-Next currently does not support soft-resetting to the game menu. If this is important to you, consider using the nds-bootstrap loader within AKMenu-Next.
+            If there's already a `BOOT.NDS` on your SD card that something else relies on, rename the AKMenu-Next one (e.g. `akmenu-next.nds`) before copying it over, then launch it from your kernel.
 
-    !!! warning
-        Using the wrong version of Pico-Loader could damage your flashcard!
-        If you are unsure which version to use, check the [Supported Platforms section](https://github.com/LNH-team/pico-loader?tab=readme-ov-file#supported-platforms).
+    #### Installing a game loader
 
-    1. Download the latest release of [Pico-Loader](https://github.com/LNH-team/pico-loader/releases/latest). Choose the version that corresponds with your flashcart. If you are unsure [click here](https://github.com/LNH-team/pico-loader#supported-platforms) to see a table where you can match up your flashcart with the corresponding loader. If your flashcart is not on the list, you may skip to "nds-bootstrap installation (Optional)" below.
+    AKMenu-Next doesn't run DS games by itself, it hands them off to a loader. You need **at least one** of these. You can install both and switch between them whenever you like, even per game.
 
-    1. Extract the downloaded `Pico_Loader_YOUR_FLASHCART_HERE.zip` file with [7-Zip](https://www.7-zip.org/).
+    - **Pico-Loader** only supports certain flashcarts, but if yours is on the list it's a good choice.
+    - **nds-bootstrap** works on pretty much any flashcart that can run homebrew. The Flashcart Edition uses nds-bootstrap by default.
 
-    1. Copy the *contents* of the files from the extracted `Pico_Loader_YOUR_FLASHCART_HERE.zip` file to the `_pico` folder on your SD card. Create this folder if it does not exist.
+    === "Pico-Loader"
 
-    You can now load `BOOT.NDS` with your flashcart's kernel, or alternatively follow the autoboot steps below.
+        !!! warning
+            Using the wrong version of Pico-Loader could damage your flashcart!
+            If you are unsure which version to use, check the [Supported Platforms section](https://github.com/LNH-team/pico-loader?tab=readme-ov-file#supported-platforms). If your flashcart isn't listed, use nds-bootstrap instead.
 
-    !!! info "nds-bootstrap installation (Optional)"
+        1. Download the latest release of [Pico-Loader](https://github.com/LNH-team/pico-loader/releases/latest). Pick the zip that matches your flashcart, using the [Supported Platforms table](https://github.com/LNH-team/pico-loader#supported-platforms) to work out which one that is.
+
+        1. Extract the downloaded `Pico_Loader_YOUR_FLASHCART_HERE.zip` file with [7-Zip](https://www.7-zip.org/).
+
+        1. Copy the *contents* of the zip into the `_pico` folder on your SD card (create it if it isn't there). When you're done, you should have `_pico/picoLoader7.bin` and `_pico/picoLoader9.bin`.
+
+        1. Boot AKMenu-Next, press `START` and go to `Settings`. In the `Game loader settings` tab, change `Game Loader` to `Pico-Loader`, then press `A` and confirm to save.
+
+    === "nds-bootstrap"
 
         1. Download the latest release of [nds-bootstrap](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip).
 
-        1. Extract the downloaded nds-bootstrap.zip file with [7-Zip](https://www.7-zip.org/).
+        1. Extract the downloaded `nds-bootstrap.zip` file with [7-Zip](https://www.7-zip.org/).
 
-        1. Copy the contents of the files from the extracted `nds-bootstrap.zip` file to the `_nds` folder on your SD card.
+        1. Copy the *contents* of the zip into the `_nds` folder on your SD card. You should end up with files like `_nds/nds-bootstrap-release.nds` and `_nds/nds-bootstrap-hb-release.nds`.
 
-        1. n AKMenu-Next, press `Start` and go to `Settings`. Go to the `Other Settings` tab and change the `Game Loader` to `nds-bootstrap`.   
+        1. That's it, nds-bootstrap is already the default loader on the Flashcart Edition. If you've previously switched to Pico-Loader, press `START`, go to `Settings` > `Game loader settings` and set `Game Loader` back to `nds-bootstrap`.
+
+        !!! note
+
+            The first time you launch a game with nds-bootstrap you'll get a message about first-time setup. It creates a large `pagefile.sys` in `_nds`, which can take a minute. This only happens once.
+
+    You can now launch `BOOT.NDS` from your flashcart's kernel, or set up autobooting below so you go straight into AKMenu-Next.
 
     #### Autobooting AKMenu-Next
 
     !!! note
 
-        If you don't see your flashcart in the Autoboot folder or the corresponding one in the `README.TXT` file, skip this section as you will need to use your flashcart kernel to load AKMenu-Next instead. In some cases you can make a copy of `BOOT.NDS` and rename it to `default.nds` to make it chainload autoboot on some flashcart kernels.
+        If you can't find your flashcart in the `Autoboot` folder (check `Autoboot/README.txt` too, as a lot of clones share files), skip this section and just launch `BOOT.NDS` from your kernel. On some kernels you can make a copy of `BOOT.NDS` called `default.nds` to have it chainload automatically.
 
-    1. Open the `Autoboot` folder within the AKMenu-Next files. Find the folder that corresponds to your flashcart name or type.
-    
-    1. Copy the *contents* of the folder (do not copy the folder itself) that corresponds with your flashcart to the root of your SD card.
+    1. Open the `Autoboot` folder in the AKMenu-Next files and find the folder that matches your flashcart.
 
-    1. If your flashcart is a DSTTi clone that requires additional boot files, check the `Supplementary DSTTi Clone Files` folder. You can check the [YSMenu compatibility list](https://www.flashcarts.net/ysmenu-compat-ext) to check which one you need. If the file you need is not there, you can make copies of the `TTMenu.dat` file from the `DSTT & DSTTi` folder and rename them accordingly.
+    1. Copy the *contents* of that folder (not the folder itself) to the root of your SD card. Overwrite anything it asks about.
 
-    #### Cheats
+    1. If your flashcart is a DSTTi clone that needs extra boot files, look in the `Supplementary DSTTi Clone Files` folder. The [YSMenu compatibility list](https://www.flashcarts.net/ysmenu-compat-ext) can tell you which file your cart wants. If it isn't there, make copies of `TTMenu.dat` from the `DSTT & DSTTi` folder and rename them to whatever your cart needs.
 
-    1. If you'd like to be able to use cheats on your games, download a [cheat database.](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711)
-    
-    1. You will need the `usrcheat.dat` file from the download link in the post. Copy this file to `_nds/akmenunext/cheats/` on your SD card. (Create the `cheats` folder if it doesn't exist)
+    !!! tip "Slot-1 carts that need DLDI patching"
+
+        Most kernels DLDI patch homebrew for you. A few, like the Games n' Music, or Slot-2 carts booted into NDS mode, might not. If AKMenu-Next can't see your SD card, DLDI patch `BOOT.NDS` with your cart's driver first.
+
+    #### Cheats (optional)
+
+    1. Download a [cheat database](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711).
+
+    1. Copy `usrcheat.dat` from the download to `_nds/akmenunext/cheats/` on your SD card (create the `cheats` folder if it's missing).
+
+    See [Using the Menu](using.md#cheats) for how to actually turn cheats on.
 
 === "DSpico"
 
     #### Installing AKMenu-Next DSpico Edition
 
-    1. Download the latest release of [AKMenu-Next DSpico Edition.](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-pico.zip)
+    1. Download the latest release of [AKMenu-Next DSpico Edition](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-pico.zip).
 
     1. Extract the downloaded `akmenu-next-pico.zip` file with [7-Zip](https://www.7-zip.org/).
 
-    1. From within the AKMenu-Next files, copy the following files/folders to your SD card root:
+    1. Copy the following files/folders to the root of your DSpico's SD card:
 
         - `_nds` folder
         - `_pico` folder
         - `BOOT.NDS`
-        - `_picoboot.nds` (If you wish to autoboot AKMenu-Next)
+        - `_picoboot.nds` (only if you want to autoboot AKMenu-Next instead of Pico-Launcher)
 
-    !!! warning "Soft-Reset Not Supported for Pico-Loader"
-
-        Note that Pico-Loader inside AKMenu-Next currently does not support soft-resetting to the game menu. If this is important to you, consider using the nds-bootstrap loader within AKMenu-Next.
+    #### Installing Pico-Loader
 
     1. Download the latest release of [Pico-Loader for DSpico](https://github.com/LNH-team/pico-loader/releases/latest/download/Pico_Loader_DSPICO.zip).
 
     1. Extract the downloaded `Pico_Loader_DSPICO.zip` file with [7-Zip](https://www.7-zip.org/).
 
-    1. Copy the *contents* of the files from the extracted `Pico_Loader_DSPICO.zip` file to the `_pico` folder on your SD card.
+    1. Copy the *contents* of the zip into the `_pico` folder on your SD card. You should end up with `_pico/picoLoader7.bin` and `_pico/picoLoader9.bin`.
 
-    1. You can now load `BOOT.NDS` from Pico-Launcher kernel, or alternatively autoboot by using the `_picoboot.nds` file.
+    1. You can now launch `BOOT.NDS` from Pico-Launcher. If you copied `_picoboot.nds`, the DSpico will boot straight into AKMenu-Next instead.
 
     !!! info "nds-bootstrap installation (Optional)"
 
         1. Download the latest release of [nds-bootstrap](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip).
 
-        1. Extract the downloaded nds-bootstrap.zip file with [7-Zip](https://www.7-zip.org/).
+        1. Extract the downloaded `nds-bootstrap.zip` file with [7-Zip](https://www.7-zip.org/).
 
-        1. Copy the contents of the files from the extracted `nds-bootstrap.zip` file to the `_nds` folder on your SD card.
+        1. Copy the *contents* of the zip into the `_nds` folder on your SD card.
 
-        1. In AKMenu-Next, press `Start` and go to `Settings`. Go to the `Game loader settings` tab and change the `Game Loader` to `nds-bootstrap`. 
+        1. In AKMenu-Next, press `START` and go to `Settings`. Go to the `Game loader settings` tab and change `Game Loader` to `nds-bootstrap`. You can also leave the global setting on Pico-Loader and only switch individual games over (see [per-game settings](using.md#per-game-settings)).
 
-    #### Cheats
+    #### Cheats (optional)
 
-    1. If you'd like to be able to use cheats on your games, download a [cheat database.](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711)
-    
-    1. You will need the `usrcheat.dat` file from the download link in the post. Copy this file to `_nds/akmenunext/cheats/` on your SD card. (Create the `cheats` folder if it doesn't exist)
+    1. Download a [cheat database](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711).
+
+    1. Copy `usrcheat.dat` from the download to `_nds/akmenunext/cheats/` on your SD card (create the `cheats` folder if it's missing).
+
+    See [Using the Menu](using.md#cheats) for how to actually turn cheats on.
 
     #### Running DSiWare (DSi & 3DS only)
 
-    Please see [this guide](dsiware.md) for running DSiWare on a DSpico.
+    The DSpico can run DSiWare when it's plugged into a DSi or 3DS. See [Running DSiWare](dsiware.md#dspico).
 
 === "Nintendo DSi"
 
     !!! note
 
-        This requires a modded Nintendo DSi system. If your Nintendo DSi is not modded, please follow [dsi.cfw.guide](https://dsi.cfw.guide) to install it.
+        This needs a modded Nintendo DSi. If yours isn't modded yet, follow [dsi.cfw.guide](https://dsi.cfw.guide) first.
 
     #### Installing AKMenu-Next Nintendo DSi Edition
 
-    1. Download the latest release of [AKMenu-Next DSi Edition.](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-dsi.zip)
+    1. Download the latest release of [AKMenu-Next DSi Edition](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-dsi.zip).
 
     1. Extract the downloaded `akmenu-next-dsi.zip` file with [7-Zip](https://www.7-zip.org/).
 
         !!! warning
 
-            If you are using TWiLight Menu++ and want to dual boot AKMenu-Next, do not copy over `BOOT.NDS` as this will overwrite the one TWiLight Menu++ uses.
-            You can instead launch `akmenu-next.dsi` with TWiLight Menu++ or Unlaunch.
+            If you use TWiLight Menu++ and want to keep it alongside AKMenu-Next, **don't** copy over `BOOT.NDS`, as it'll overwrite the one TWiLight Menu++ uses.
+            Launch `akmenu-next.dsi` from TWiLight Menu++ or Unlaunch instead.
 
-    1. From within the AKMenu-Next files, copy the following files/folders to your SD card root:
+    1. Copy the following files/folders to the root of your SD card:
 
         - `_nds` folder
-        - `BOOT.NDS` (Please read the warning above)
+        - `BOOT.NDS` (read the warning above)
         - `akmenu-next.dsi`
-        - `title` folder (if using HiyaCFW)
+        - `title` folder (only if you use HiyaCFW)
 
-    1. Download the latest release of [nds-bootstrap.](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip)
+    1. Download the latest release of [nds-bootstrap](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip).
 
     1. Extract the downloaded `nds-bootstrap.zip` file with [7-Zip](https://www.7-zip.org/).
 
-    1. Copy the *contents* of the files from the extracted `nds-bootstrap.zip` file to the `_nds` folder on your SD card.
+    1. Copy the *contents* of the zip into the `_nds` folder on your SD card.
 
-    1. Load `BOOT.NDS` with your desired entrypoint method (e.g. Memory Pit, stylehax or Flipnote Lenny). Alternatively, use Unlaunch or TWiLight Menu++ to boot `akmenu-next.dsi`. If you are using HiyaCFW, it will appear as an app on your home screen, provding that you copied the `title` folder.
+    1. Load `BOOT.NDS` with whatever entrypoint you use (e.g. Memory Pit, stylehax or Flipnote Lenny), or launch `akmenu-next.dsi` from Unlaunch or TWiLight Menu++. If you use HiyaCFW and copied the `title` folder, AKMenu-Next will show up on your home menu as an app.
 
-    #### Cheats
+    #### Cheats (optional)
 
-    1. If you'd like to be able to use cheats on your games, download a [cheat database.](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711)
-    
-    1. You will need the `usrcheat.dat` file from the download link in the post. Copy this file to `_nds/akmenunext/cheats/` on your SD card. (Create the `cheats` folder if it doesn't exist)
+    1. Download a [cheat database](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711).
+
+    1. Copy `usrcheat.dat` from the download to `_nds/akmenunext/cheats/` on your SD card (create the `cheats` folder if it's missing).
+
+    See [Using the Menu](using.md#cheats) for how to actually turn cheats on.
 
     #### Autobooting AKMenu-Next
 
     !!! note
-        Autobooting AKMenu-Next on a DSi requires [Unlaunch](https://dsi.cfw.guide/installing-unlaunch.html) or [Astronaut](https://github.com/Vickerinox/Astronaut/releases/latest) to be installed.
+        Autobooting AKMenu-Next on a DSi needs [Unlaunch](https://dsi.cfw.guide/installing-unlaunch.html) or [Astronaut](https://github.com/Vickerinox/Astronaut/releases/latest) installed.
 
     === "Unlaunch Users"
 
-        1. Turn on your DSi while holding A and B
+        1. Turn on your DSi while holding `A` and `B`.
 
-        1. In the Unlaunch menu, go to OPTIONS
+        1. In the Unlaunch menu, go to `OPTIONS`.
 
-        1. Set NO BUTTON or a button of your choice to the `akmenu-next` entry that says `akmenu-next.dsi` on the bottom screen
+        1. Set `NO BUTTON` (or a button of your choice) to the `akmenu-next` entry. The bottom screen should show `akmenu-next.dsi` when it's selected.
 
-        1. Switch off your DSi and switch it back on, it will now automatically boot into AKMenu-Next
-    
+        1. Turn your DSi off and back on. It'll now boot straight into AKMenu-Next.
+
     === "Astronaut Users"
 
-        1. Turn on your DSi while holding A and B
+        1. Turn on your DSi while holding `A` and `B`.
 
-        1. In the Astronaut menu, go to `Settings`, then go to `Change Boot Options`
+        1. In the Astronaut menu, go to `Settings`, then `Change Boot Options`.
 
-        1. Select `default boot option` and choose `Launch something from SD`
+        1. Select `default boot option` and choose `Launch something from SD`.
 
-        1. Locate `akmenu-next.dsi` on the SD card and select it
+        1. Find `akmenu-next.dsi` on the SD card and select it.
 
-        1. Press `go back` at the bottom and then `Save` on the previous screen
+        1. Press `go back` at the bottom, then `Save` on the previous screen.
 
-        1. Switch off your DSi and switch it back on, it will now automatically boot into AKMenu-Next
+        1. Turn your DSi off and back on. It'll now boot straight into AKMenu-Next.
+
+    #### Running DSiWare
+
+    AKMenu-Next can launch DSiWare from your DSi's SD card. See [Running DSiWare](dsiware.md#dsi-and-3ds-sd-card).
 
 === "Nintendo 3DS"
 
     !!! note
 
-        This requires a modded Nintendo 3DS system. If your Nintendo 3DS is not modded, please follow [3ds.hacks.guide](https://3ds.hacks.guide) to install it. This guide is also applicable to the Nintendo 2DS models but will be referenced as a 3DS in the steps below.
+        This needs a modded Nintendo 3DS. If yours isn't modded yet, follow [3ds.hacks.guide](https://3ds.hacks.guide) first. Everything here works the same on the 2DS family, it's just called "3DS" below to keep things short.
 
     #### Installing AKMenu-Next Nintendo 3DS Edition
 
-    1. Download the latest release of [AKMenu-Next 3DS Edition.](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-3ds.zip)
+    1. Download the latest release of [AKMenu-Next 3DS Edition](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-3ds.zip).
 
     1. Extract the downloaded `akmenu-next-3ds.zip` file with [7-Zip](https://www.7-zip.org/).
 
         !!! warning
 
-            If you are using TWiLight Menu++ on your Nintendo 3DS and want to also use AKMenu-Next, do not copy over `BOOT.NDS` as this will overwrite the one TWiLight Menu++ uses.
+            If you use TWiLight Menu++ on your 3DS and want to keep it, **don't** copy over `BOOT.NDS`, as it'll overwrite the one TWiLight Menu++ uses. You don't need it anyway since you'll be launching AKMenu-Next from the home menu.
 
-    1. From within the AKMenu-Next files, copy the following files/folders to your SD card root:
+    1. Copy the following files/folders to the root of your SD card:
 
         - `_nds` folder
-        - `BOOT.NDS` (Please read the warning above)
+        - `BOOT.NDS` (read the warning above)
         - `akmenu-next.cia`
 
-    1. Download the latest release of [nds-bootstrap.](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip)
+    1. Download the latest release of [nds-bootstrap](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip).
 
     1. Extract the downloaded `nds-bootstrap.zip` file with [7-Zip](https://www.7-zip.org/).
 
-    1. Copy the *contents* of the files from the extracted `nds-bootstrap.zip` file to the `_nds` folder on your SD card.
+    1. Copy the *contents* of the zip into the `_nds` folder on your SD card.
 
-    1. Boot up your Nintendo 3DS. Open the FBI app, go to your SD card, and find the `akmenu-next.cia` file. Select the cia, then choose "Install CIA".
+    1. Put the SD card back in your 3DS and turn it on. Open FBI, go to `SD`, find `akmenu-next.cia`, select it and choose `Install CIA`.
 
-    1. Launch the `akmenu-next` application from the 3DS home screen.
-    
+    1. Launch `akmenu-next` from the 3DS home menu.
+
     !!! tip
-    
-        If you are upgrading from an older version of AKMenu-Next, or if AKMenu-Next does not appear on your 3DS home screen after installing the cia, restart your 3DS.
 
-    #### Cheats
+        If AKMenu-Next doesn't show up on the home menu after installing (or you're updating an older version), restart your 3DS.
 
-    1. If you'd like to be able to use cheats on your games, download a [cheat database.](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711)
-    
-    1. You will need the `usrcheat.dat` file from the download link in the post. Copy this file to `_nds/akmenunext/cheats/` on your SD card. (Create the `cheats` folder if it doesn't exist)
+    Once it's installed you can delete `akmenu-next.cia` from your SD card if you want the space back.
 
-=== "Updating"
+    #### Cheats (optional)
 
-    !!! info
+    1. Download a [cheat database](https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711).
 
-        AKMenu-Next, nds-bootstrap and Pico-Loader must be updated seperately of each other.
-        If you wish to check for the latest version of AKMenu-Next, nds-bootstrap and Pico-Loader, you can view the latest versions & changelog from the Github releases linked here: [AKMenu-Next Releases](https://github.com/coderkei/akmenu-next/releases/latest) - [nds-bootstrap Releases](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest) - [Pico-Loader Releases](https://github.com/LNH-team/pico-loader/releases/latest)
+    1. Copy `usrcheat.dat` from the download to `_nds/akmenunext/cheats/` on your SD card (create the `cheats` folder if it's missing).
 
-    #### Updating AKMenu-Next
+    See [Using the Menu](using.md#cheats) for how to actually turn cheats on.
 
-    === "Flashcart"
+    #### Running DSiWare
 
-        1. Download the latest release of [AKMenu-Next Flashcart Edition.](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-flashcart.zip)
+    AKMenu-Next can launch DSiWare from your 3DS's SD card through nds-bootstrap. See [Running DSiWare](dsiware.md#dsi-and-3ds-sd-card).
 
-        1. Extract the downloaded `akmenu-next-flashcart.zip` file with [7-Zip](https://www.7-zip.org/).
+## First boot
 
-        1. From within the akmenu-next files, copy the following files/folders to your SD card root:
+The first time AKMenu-Next starts, it'll ask you to pick a language. Choose one and it'll restart into the menu. You can change it later in the `System settings` tab of the settings menu.
 
-            - `_nds` folder
-            - `BOOT.NDS`
+After that you'll see the top level of the file browser. What's listed depends on your setup:
 
-        1. Overwrite the existing files. If you are on MacOS ensure you click `Merge` and not `Replace`, otherwise themes, plugins & cheats may be deleted.
+| Setup | What you'll see |
+| --- | --- |
+| Flashcart in a DS / DS Lite | microSD Card, Favourites, Recently Played, Slot 2 Card |
+| Flashcart or DSpico in a DSi / 3DS | microSD Card, DSi SD (if a card is in the console), Favourites, Recently Played, Slot 2 Card |
+| DSi / 3DS SD card | DSi SD, Favourites, Recently Played, Slot 1 Card |
 
-    === "DSpico"
+Head into your SD card, find a game and press `A`. Have a look at [Using the Menu](using.md) for everything else.
 
-        1. Download the latest release of [AKMenu-Next DSpico Edition.](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-pico.zip)
+### What your SD card should look like
 
-        1. Extract the downloaded `akmenu-next-pico.zip` file with [7-Zip](https://www.7-zip.org/).
+Here's roughly what you'll have once everything is installed. You don't need to match it exactly, but if something isn't working it's a handy thing to compare against:
 
-        1. From within the akmenu-next files, copy the following files/folders to your SD card root:
-
-            - `_nds` folder
-            - `BOOT.NDS`
-            - `_picoboot.nds` (If you wish to autoboot AKMenu-Next)
-
-        1. Overwrite the existing files. If you are on MacOS ensure you click `Merge` and not `Replace`, otherwise themes, plugins & cheats may be deleted.
-
-    === "Nintendo DSi"
-
-        1. Download the latest release of [AKMenu-Next DSi Edition.](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-dsi.zip)
-
-        1. Extract the downloaded `akmenu-next-dsi.zip` file with [7-Zip](https://www.7-zip.org/).
-
-        1. From within the akmenu-next files, copy the following files/folders to your SD card root:
-
-            - `_nds` folder
-            - `BOOT.NDS` (If you use Twilightmenu++, skip this file)
-            - `akmenu-next.dsi`
-            - If you have AKMenu-Next installed as an app on HiyaCFW, copy over the `title` folder.
-
-        1. Overwrite the existing files. If you are on MacOS ensure you click `Merge` and not `Replace`, otherwise themes, plugins & cheats may be deleted.
-
-    === "Nintendo 3DS"
-
-        1. Download the latest release of [AKMenu-Next DSi Edition.](https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-3ds.zip)
-
-        1. Extract the downloaded `akmenu-next-3ds.zip` file with [7-Zip](https://www.7-zip.org/).
-
-        1. From within the akmenu-next files, copy the following files/folders to your SD card root:
-
-            - `_nds` folder
-            - `BOOT.NDS` (If you use Twilightmenu++, skip this file)
-            - `akmenu-next.cia`
-
-        1. Overwrite the existing files. If you are on MacOS ensure you click `Merge` and not `Replace`, otherwise themes, plugins & cheats may be deleted.
-
-        1. Install the `akmenu-next.cia` file with FBI, you may need to restart your 3DS console afterwards to use the new version.
-
-
-    === "Updating nds-bootstrap"
-
-        1. Download the latest release of [nds-bootstrap.](https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip)
-
-        1. Extract the downloaded `nds-bootstrap.zip` file with [7-Zip](https://www.7-zip.org/).
-
-        1. Copy the *contents* of the files from the extracted `nds-bootstrap.zip` file to the `_nds` folder on your SD card.
-
-    === "Updating Pico-Loader"
-
-        1. Download the latest release of [Pico-Loader](https://github.com/LNH-team/pico-loader/releases/latest). Choose the version that corresponds with your flashcart. If you are unsure [click here](https://github.com/LNH-team/pico-loader#supported-platforms) to see a table where you can match up your flashcart with the corresponding loader.
-
-        1. Extract the downloaded `Pico_Loader_for_YOUR_FLASHCART_HERE.zip` file with [7-Zip](https://www.7-zip.org/).
-
-        1. Copy the *contents* of the files from the extracted `Pico_Loader_for_YOUR_FLASHCART_HERE.zip` file to the `_pico` folder on your SD card. Create this folder if it does not exist.
+```text
+SD:/
+├── _nds/
+│   ├── akmenunext/            <- AKMenu-Next's own files
+│   │   ├── cheats/usrcheat.dat
+│   │   ├── language/
+│   │   ├── plugins/
+│   │   ├── ui/                <- themes go in here
+│   │   ├── globalsettings.ini <- created on first boot
+│   │   └── launcher.nds
+│   ├── nds-bootstrap-release.nds
+│   ├── nds-bootstrap-hb-release.nds
+│   └── nds-bootstrap-nightly.nds (optional)
+├── _pico/                     <- flashcart & DSpico only
+│   ├── picoLoader7.bin
+│   └── picoLoader9.bin
+├── BOOT.NDS
+└── (your games, in whatever folders you like)
+```
 
 !!! info
 
-    Need help or want to discuss AKMenu-Next? Check out the [AKMenu-Next GBATemp Thread](https://gbatemp.net/threads/ds-i-3ds-akmenu-next-wood-frontend-for-nds-bootstrap-pico-loader.665743/)
+    Need help or want to chat about AKMenu-Next? Check out the [AKMenu-Next GBAtemp thread](https://gbatemp.net/threads/ds-i-3ds-akmenu-next-wood-frontend-for-nds-bootstrap-pico-loader.665743/).

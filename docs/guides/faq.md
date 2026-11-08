@@ -2,43 +2,83 @@
 title: FAQ
 ---
 
-### AKMenu-Next FAQ
+# FAQ
 
-Please see below for frequently asked questions about AKMenu-Next.
+Some questions that come up a lot. If something's actually broken, the [Troubleshooting](troubleshooting.md) page might be more help.
 
-#### How do I soft-reset or quit back to the menu
+#### How do I soft-reset or quit back to the menu?
 
-- Use the nds-bootstrap button combination of L + Down + Select or change it in Settings -> Menu Hotkey.​ More controls can be found on the nds-bootstrap controls page. Pico-Loader currently does not support soft-reset.​
+With nds-bootstrap, press `L` + `Down` + `SELECT` in game. You can change this combo with `Settings` > `System settings` > `Menu Hotkey`, or [set your own](settings.md#custom-hotkey). More in-game controls are on the [nds-bootstrap controls page](https://wiki.ds-homebrew.com/nds-bootstrap/controls).
+#### Should I use Pico-Loader or nds-bootstrap?
+
+If you're on a flashcart that Pico-Loader supports, or a DSpico, give Pico-Loader a go. It's also the only option for `.ndz` files. If your cart isn't supported by Pico-Loader, use nds-bootstrap. On a DSi or 3DS SD card it's nds-bootstrap only.
+
+You don't have to pick just one. Install both and you can switch loaders for an individual game in its [per-game settings](using.md#per-game-settings), which is handy if one game works better with the other loader.
 
 #### What flashcarts does this work with?
 
-- This should work on any flashcart that can load homebrew, either via it's kernel, or via one of the provided autoboot files. If not autobooting, some flashcarts such as the Games N Music or some Slot 2 carts booted into NDS mode may require you to DLDI patch BOOT.NDS first.​
-​
+Pretty much any flashcart that can run homebrew, either through its own kernel or using one of the autoboot files that come with AKMenu-Next. If you're not autobooting, some carts (like the Games n' Music, or some Slot-2 carts booted into NDS mode) might need `BOOT.NDS` DLDI patched first.
+
+Pico-Loader only works on [certain flashcarts](https://github.com/LNH-team/pico-loader#supported-platforms), but nds-bootstrap will work on anything that runs homebrew.
+
 #### Can I run DSiWare on AKMenu-Next?
 
-- DSiWare is supported on the DSpico cart when running on a DSi or 3DS with the Game Loader set to Pico-Loader. You must have the required DSi files for this to run, the instructions for this are available above in the main links.​
+Yes, on these setups:
 
-- Due to the complexity of adding TWiLight Menu++'s DSiWare implementation for it into the existing akmenu4 code. Please use TWiLight Menu++ to run DSiWare if you are not on a DSpico.​
-​
-#### Can I use this alongside TWiLight Menu++ on a DSi or 3DS?
+- A modded DSi or 3DS running AKMenu-Next from the console's SD card
+- A DSpico plugged into a DSi or 3DS
 
-- On a 3DS or a DSi system you must take care to not overwrite the existing BOOT.NDS file required by TWiLight Menu++.​ If you plan to use both on a DSi, copy only the akmenu-next.dsi file and launch that via Unlaunch or TWiLight Menu++. This is explained in the guide. On a 3DS, omit copying the BOOT.NDS file.​
-​
-- Likewise the same applies to a flashcart should you wish to use both, where you should rename the included BOOT.NDS to something else and launch it with the existing kernel you are using.​
-​
-#### How can I use a nightly build of nds-bootstrap on AKMenu-Next?
+Normal flashcarts can't run DSiWare since they run in DS mode, and the DS and DS Lite don't have the hardware for it at all. See [Running DSiWare](dsiware.md) for how to set it up.
 
-- Put a copy of nds-bootstrap-nightly.nds inside the _nds folder. Then go into the settings and under the File system settings section, set nds-bootstrap version to nightly.​
-​
+#### Can I use this alongside TWiLight Menu++?
+
+Yep. The main thing is not to overwrite the `BOOT.NDS` that TWiLight Menu++ uses.
+
+- **DSi:** skip copying `BOOT.NDS` and launch `akmenu-next.dsi` from Unlaunch or TWiLight Menu++ instead.
+- **3DS:** skip copying `BOOT.NDS`. You launch AKMenu-Next from the home menu anyway.
+- **Flashcart:** rename AKMenu-Next's `BOOT.NDS` to something else (like `akmenu-next.nds`) and launch it from your kernel or from TWiLight.
+
+Both menus use nds-bootstrap from the same `_nds` folder, so you only need it installed once. Both can use a `saves` folder next to your ROMs too, so your saves should carry across as long as the `Save extension` and `Use 'saves' folder` settings match how TWiLight has them.
+
+#### How can I use a nightly build of nds-bootstrap?
+
+Put `nds-bootstrap-nightly.nds` in your `_nds` folder (next to `nds-bootstrap-release.nds`), then go to `Settings` > `Game loader settings` and set `nds-bootstrap version` to `nightly`. You can also just use nightly for one game, from its [per-game settings](using.md#per-game-settings). There's more detail on the [updating page](updating.md#updating-nds-bootstrap).
+
 #### What games are compatible?
 
-- Typically most retail games should compatible in the latest version of nds-bootstrap and Pico-Loader. Compatibility with rom-hacks, translations and randomizers are not guaranteed.​
-​
-- Any issues with game compatibility should be submitted on the [nds-bootstrap issue tracker](https://github.com/DS-Homebrew/nds-bootstrap/issues) or the [Pico-Loader issue tracker.](https://github.com/LNH-team/pico-loader/issues)
+Most retail games should work with the latest nds-bootstrap or Pico-Loader. ROM hacks, translations and randomisers might be hit or miss.
 
-- Homebrew is supported as well, although homebrew compatibility may be limited on DSi and 3DS systems due to some homebrew only running correctly on flashcarts, on those systems you may opt to use the "nds-bootstrap" option in the "Homebrew Loader" for any homebrew that doesn't load with the default loader.​
+AKMenu-Next just hands the game to the loader, so game compatibility problems should be reported to the loader instead:
+
+- [nds-bootstrap issue tracker](https://github.com/DS-Homebrew/nds-bootstrap/issues)
+- [Pico-Loader issue tracker](https://github.com/LNH-team/pico-loader/issues)
+
+Homebrew works too. On a DSi or 3DS, some homebrew only runs properly from a flashcart. If something doesn't load, try setting `Homebrew Loader` to `nds-bootstrap-hb` in `Settings` > `Game loader settings`.
+
+#### Where are my saves?
+
+By default (Flashcart, DSi and 3DS editions) they're in a `saves` folder next to the ROM, e.g. `Games/saves/Mario.sav`. The DSpico edition puts them right next to the ROM, e.g. `Games/Mario.sav`. You can change both of these, see [Saves](using.md#saves).
+
+#### Can I have more than one save for a game?
+
+Yes, every game has four save slots. Press `Y` on a game, `Y` again for its settings, and change `Choose Save Slot` in the `Features` tab. See [Save slots](using.md#save-slots).
+
+#### Can I play GBA games?
+
+On a DS or DS Lite with an EZ-Flash 3-in-1 (or compatible) expansion pack, yes, `.gba` files from your SD card can be loaded onto it. You can also boot a real GBA cart (or Slot-2 flashcart) from the `Slot 2 Card` entry.
+
+On a DSi or 3DS there's no GBA slot, but you can set up a GBA emulator (like GBARunner3) as a [plugin](plugins.md) so `.gba` files open in it.
+
+#### Can I use my old Acekard / Wood themes?
+
+Yes! Drop them into `_nds/akmenunext/ui/` and pick them from `START` > `Themes`. See [Themes](themes.md).
+
+#### Can I change the language?
+
+Go to `Settings` > `System settings` > `Language`. Right now AKMenu-Next comes with English, French, German, Italian, Spanish, Russian, Japanese, and Simplified and Traditional Chinese. If you'd like to help translate, the language files are in the [AKMenu-Next repo](https://github.com/coderkei/akmenu-next/tree/main/language).
+
+The `Language Override` setting in `Game loader settings` is something different: it changes which language *games* start in, not the menu.
 
 #### I have a question not listed here
 
-- Please submit your question to the [AKMenu-Next GBATemp Thread](https://gbatemp.net/threads/ds-i-3ds-akmenu-next-wood-frontend-for-nds-bootstrap-pico-loader.665743/) or if you wish to report a bug, issue or feature request, please open a request on the [AKMenu-Next Issue Tracker.](https://github.com/coderkei/akmenu-next/issues)
-
+Ask it in the [AKMenu-Next GBAtemp thread](https://gbatemp.net/threads/ds-i-3ds-akmenu-next-wood-frontend-for-nds-bootstrap-pico-loader.665743/). If you want to report a bug or request a feature, please open an issue on the [AKMenu-Next issue tracker](https://github.com/coderkei/akmenu-next/issues).

@@ -1,63 +1,143 @@
 ---
-title: Running DSiWare On AKMenu-Next
-
-
+title: Running DSiWare
 ---
 
-### DSpico with AKMenu-Next (DSpico only)
+# Running DSiWare
 
-!!! info "Console Compatibility"
+AKMenu-Next can run DSiWare in two ways, depending on your setup:
 
-    This only works if your DSpico with AKMenu-Next is running on a DSi or 3DS system. It will not load DSiWare on the Original NDS or DS Lite, since those consoles are missing the upgraded DSi hardware for running DSi-mode apps.
+| Setup | Works? | How |
+| --- | --- | --- |
+| Modded DSi, running AKMenu-Next from the console's SD card | Yes | nds-bootstrap, Unlaunch or Astronaut |
+| Modded 3DS, running AKMenu-Next from the console's SD card | Yes | nds-bootstrap |
+| DSpico in a DSi or 3DS | Yes | Pico-Loader |
+| Any flashcart (including DSpico) in a DS or DS Lite | No | The DS and DS Lite don't have the hardware to run DSi software |
+| Other flashcarts in a DSi or 3DS | No | Most flashcarts run in DS mode only. If your console is modded, put your DSiWare on the console's SD card instead |
 
-1. Download the [DSpico BIOS and NAND dumper utility.](https://files.deletecat.com/projects/pico_file_dump/current/pico_file_dump.nds)
+DSiWare dumps need to end in `.nds`, `.dsi`, `.srl` or `.ids` for AKMenu-Next to pick them up. If yours has no extension at all, or is called something like `00000000.app`, just rename it to something like `Flipnote Studio.nds`.
 
-1. Place `pico_file_dump.nds` on your DSpico's SD card root.
+## DSi and 3DS SD card
 
-1. Create a `DSiWare` folder on your SD card root, and place any DSiWare ROMs you'd like to play inside.
+This is for the DSi and 3DS editions of AKMenu-Next, running from the SD card inside the console.
 
-    !!! note "DSiWare File Types"
+1. Make sure nds-bootstrap is installed in the `_nds` folder on your SD card (the install guide covers this).
 
-        If your DSiWare dump is a file with no file extension, you can change the filename and add `.nds` to the end to get AKMenu-Next to pick it up.
+1. Copy your DSiWare onto the SD card. You can put it in any folder you like, a `DSiWare` folder on the root keeps things tidy.
 
-1. Eject the SD card, insert it back into your DSpico, then boot into the cart.
+1. Launch it from AKMenu-Next like any other game.
 
-1. In the menu, navigate to and launch `pico_file_dump.nds`. Dumping will begin.
+That's all there is to it on a 3DS.
 
-1. Once all files have been dumped, press the power button to turn off the system.
+### Using Unlaunch or Astronaut to boot DSiWare (DSi only)
 
-1. Boot up AKMenu-Next and ensure that `Game Loader` in settings is set to `Pico-Loader`.
+On a DSi with [Unlaunch](https://dsi.cfw.guide/installing-unlaunch.html) installed, you can have AKMenu-Next hand DSiWare over to Unlaunch instead of nds-bootstrap. This runs the title more like it would from the system menu, so it's worth a try if something doesn't work properly through nds-bootstrap.
 
-1. DSiWare and encrypted DS ROMs can now be played! Navigate to the `DSiWare` folder and launch a game to play.
+Got [Astronaut](https://github.com/Vickerinox/Astronaut/releases/latest) instead? That works exactly the same way, since Astronaut supports launching DSiWare just like Unlaunch does. Everything below applies to both. The option is still called `Unlaunch` in the settings, so just pick that.
 
-**Optional Filesystem Cleanup**
+- To use Unlaunch for **all** DSiWare, go to `Settings` > `Game loader settings` and set `DSiWare booter` to `Unlaunch`.
+- To use it for **one** title, highlight it, press `Y`, then `Y` again for its settings, and change `DSiWare booter` there.
 
-If you don't like the folder clutter caused by copying all the NAND files to the DSpico SD card, you can hide them from the menu by setting the hidden attribute on any files or folders you want hidden.
-    
-!!! note "Windows-only"
+AKMenu-Next quietly falls back to nds-bootstrap if Unlaunch can't be used: if neither Unlaunch nor Astronaut is installed, if the title is 64MB or bigger, or if you're on a 3DS (which can't run either of them).
 
-    The following instructions assume Windows is used. Linux/Mac instructions will be added later, but it is possible to hide files and folders on those operating systems as well, with different steps.
+### Saves
 
-1. Navigate to the SD card root on your PC's file explorer.
+DSiWare doesn't use `.sav` files. Instead, each title can have a public save (`.pub`) and/or a private save (`.prv`). AKMenu-Next reads the sizes from the title itself and creates blank ones the first time you play, so you don't need to make them yourself.
 
-1. While holding the CTRL (Control) key, click on any folders you would like to hide from AKMenu-Next's file list. The following files and folders are recommended to be hidden:
-    - `_pico` folder
-    - `photo` folder
-    - `shared1` folder
-    - `shared2` folder
-    - `sys` folder
-    - `_picoboot.nds`
-    - `boot.nds`
+Where they go:
 
-1. After selecting the last file, release the CTRL key, then right click on one of the selected files. In the right click menu, select `Properties`.
+- **nds-bootstrap** uses saves sitting right next to the ROM (e.g. `DSiWare/Flipnote.pub`) if they're already there. If not, they go wherever your normal save settings say, so with `Use 'saves' folder` turned on that's `DSiWare/saves/Flipnote.pub`.
+- **Unlaunch / Astronaut** always needs the saves right next to the ROM. If they're in a `saves` folder, AKMenu-Next moves them next to the ROM for you before booting.
 
-1. A properties window will open. Under the `Attributes` section, check the `Hidden` box, then press `OK`.
+If you already have saves from TWiLight Menu++ or a NAND dump, rename them to match the ROM's name and put them next to it, e.g. `Flipnote.nds`, `Flipnote.pub`, `Flipnote.prv`.
 
-1. A pop-up window will appear asking to confirm changes. Choose "Apply changes to the selected items, subfolders, and files", then press `OK`.
+## DSpico
 
-1. The selected files should disappear from the file manager. This is normal. You can view them again by enabling "Show hidden files" in File Explorer's "Folder Options" menu.
-    - ![Folder Options](../images/folder_options.png){align=left width="300"}
-    
-1. Since the BIOS and NAND files have already been dumped, `pico_file_dump.nds` is no longer necessary and can be deleted from the SD card root.
+!!! info "Console compatibility"
 
-1. Insert the SD card back into your DSpico and boot into the menu. The hidden files should no longer show up in the menu list, but DSiWare will still work!
+    This only works with your DSpico plugged into a DSi or 3DS. It won't work on an original DS or DS Lite, as those don't have the DSi hardware needed for DSi-mode software.
+
+To run DSiWare (and encrypted DS ROMs), Pico-Loader needs some files dumped from your console first. You only need to do this once.
+
+1. Download the [DSpico BIOS and NAND dumper utility](https://files.deletecat.com/projects/pico_file_dump/current/pico_file_dump.nds).
+
+1. Put `pico_file_dump.nds` on the root of your DSpico's SD card.
+
+1. Make a `DSiWare` folder on the root of the SD card, and put any DSiWare you'd like to play inside.
+
+1. Put the SD card back in your DSpico and boot into it.
+
+1. Find `pico_file_dump.nds` in the menu and launch it. It'll start dumping straight away.
+
+1. Once it says it's finished, press the power button to turn the console off.
+
+1. Boot into AKMenu-Next and make sure `Game Loader` in `Settings` > `Game loader settings` is set to `Pico-Loader`.
+
+1. That's it! Head into your `DSiWare` folder and launch something.
+
+!!! note
+
+    If your DSi/3DS is modded and has an SD card in it, you'll also see a `DSi SD` entry at the top level of AKMenu-Next. DSiWare launched from there goes through nds-bootstrap (installed on the *console's* SD card), not Pico-Loader. That's what the [DSi and 3DS SD card](#dsi-and-3ds-sd-card) section above is about.
+
+### Optional: tidying up your SD card
+
+The dumper copies quite a few NAND folders onto your SD card. They need to stay there, but if you don't want to see them in the file list you can mark them as hidden. AKMenu-Next doesn't show hidden files unless you turn on `Show hidden files` in the settings.
+
+Folders and files worth hiding:
+
+- `_pico` folder
+- `photo` folder
+- `shared1` folder
+- `shared2` folder
+- `sys` folder
+- `_picoboot.nds`
+- `boot.nds`
+
+Since the BIOS and NAND files have already been dumped, you can also delete `pico_file_dump.nds` now.
+
+=== "Windows"
+
+    1. Open the SD card in File Explorer.
+
+    1. Hold `Ctrl` and click each of the files and folders you want to hide.
+
+    1. Right click one of the selected items and choose `Properties`.
+
+    1. Under `Attributes`, tick `Hidden`, then press `OK`.
+
+    1. If it asks, choose "Apply changes to the selected items, subfolders, and files", then press `OK`.
+
+    1. They'll disappear from File Explorer, that's normal. You can see them again by turning on "Show hidden files" in File Explorer's "Folder Options".
+
+        ![Folder Options](../images/folder_options.png){width="300"}
+
+=== "macOS"
+
+    1. Open Terminal and go to your SD card. Replace `SDCARD` with your card's name as it appears in Finder:
+
+        ```bash
+        cd /Volumes/SDCARD
+        ```
+
+    1. Hide the files and folders:
+
+        ```bash
+        chflags hidden _pico photo shared1 shared2 sys _picoboot.nds boot.nds
+        ```
+
+    To unhide something later, run the same command with `nohidden` instead of `hidden`.
+
+=== "Linux"
+
+    You'll need the `fatattr` tool (it's in most distros' repos, e.g. `sudo apt install fatattr`). Then, from the root of your mounted SD card:
+
+    ```bash
+    fatattr +h _pico photo shared1 shared2 sys _picoboot.nds boot.nds
+    ```
+
+    Use `-h` instead of `+h` to unhide them again.
+
+Put the SD card back in your DSpico and boot into the menu. The hidden stuff won't show up any more, but DSiWare will still work.
+
+!!! tip
+
+    Files and folders starting with a `.` are hidden in AKMenu-Next too, so the `._` files macOS likes to leave everywhere won't clutter up your list.

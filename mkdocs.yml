@@ -36,6 +36,21 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
+nav:
+  - Home: index.md
+  - Getting Started:
+    - Installing: guides/akmenu-next.md
+    - Updating: guides/updating.md
+  - Using AKMenu-Next:
+    - Using the Menu: guides/using.md
+    - Settings: guides/settings.md
+    - Running DSiWare: guides/dsiware.md
+  - Customising:
+    - Themes: guides/themes.md
+    - Plugins: guides/plugins.md
+  - Help:
+    - FAQ: guides/faq.md
+    - Troubleshooting: guides/troubleshooting.md
 copyright: Created and maintained by coderkei
 extra:
   generator: false
@@ -52,6 +67,9 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
