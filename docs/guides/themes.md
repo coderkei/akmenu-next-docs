@@ -82,7 +82,9 @@ A few themes come with AKMenu-Next already (Blue Skies, Starlight and DSpico, ea
 
 === "Creating Themes"
 
-    This part's for anyone who wants to make their own theme, or tweak one they already have. It's easiest to start by copying one of the bundled themes and changing things bit by bit.
+    Use [AKTheme Studio](https://coderkei.github.io/akmenu-next-theme-editor/) to create custom themes for AKMenu-Next.
+
+    If you want to edit the theme files by hand, start by copying one of the bundled themes and changing things bit by bit.
 
     ## What's in a theme
 
