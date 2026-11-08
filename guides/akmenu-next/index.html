@@ -1,0 +1,1872 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://coderkei.github.io/akmenu-next-docs/guides/akmenu-next/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../updating/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
+    
+    
+      
+        <title>Installing AKMenu-Next - AKMenu-Next Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installing-akmenu-next" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AKMenu-Next Docs" class="md-header__button md-logo" aria-label="AKMenu-Next Docs" data-md-component="logo">
+      
+  <img src="../../images/akmenu.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AKMenu-Next Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installing AKMenu-Next
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/coderkei/akmenu-next" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    coderkei/akmenu-next
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Getting Started
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../using/" class="md-tabs__link">
+          
+  
+  
+  Using AKMenu-Next
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../themes/" class="md-tabs__link">
+          
+  
+  
+  Customising
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../faq/" class="md-tabs__link">
+          
+  
+  
+  Help
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AKMenu-Next Docs" class="md-nav__button md-logo" aria-label="AKMenu-Next Docs" data-md-component="logo">
+      
+  <img src="../../images/akmenu.png" alt="logo">
+
+    </a>
+    AKMenu-Next Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/coderkei/akmenu-next" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    coderkei/akmenu-next
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Getting Started
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-akmenu-next-flashcart-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing AKMenu-Next Flashcart Edition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-a-game-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing a game loader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autobooting-akmenu-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autobooting AKMenu-Next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheats-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheats (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-akmenu-next-dspico-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing AKMenu-Next DSpico Edition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-pico-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Pico-Loader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheats-optional_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheats (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-dsiware-dsi-3ds-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running DSiWare (DSi &amp; 3DS only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-akmenu-next-nintendo-dsi-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing AKMenu-Next Nintendo DSi Edition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheats-optional_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheats (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autobooting-akmenu-next_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autobooting AKMenu-Next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-dsiware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running DSiWare
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-akmenu-next-nintendo-3ds-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing AKMenu-Next Nintendo 3DS Edition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheats-optional_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheats (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-dsiware_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running DSiWare
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First boot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="First boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-your-sd-card-should-look-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What your SD card should look like
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../updating/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Updating
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using AKMenu-Next
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Using AKMenu-Next
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../using/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using the Menu
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dsiware/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Running DSiWare
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Customising
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Customising
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../themes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Themes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plugins/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Help
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Help
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setup-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup Guide
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setup Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-akmenu-next-flashcart-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing AKMenu-Next Flashcart Edition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-a-game-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing a game loader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autobooting-akmenu-next" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autobooting AKMenu-Next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheats-optional" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheats (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-akmenu-next-dspico-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing AKMenu-Next DSpico Edition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-pico-loader" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing Pico-Loader
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheats-optional_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheats (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-dsiware-dsi-3ds-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running DSiWare (DSi &amp; 3DS only)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-akmenu-next-nintendo-dsi-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing AKMenu-Next Nintendo DSi Edition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheats-optional_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheats (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autobooting-akmenu-next_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Autobooting AKMenu-Next
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-dsiware" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running DSiWare
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-akmenu-next-nintendo-3ds-edition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing AKMenu-Next Nintendo 3DS Edition
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheats-optional_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cheats (optional)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-dsiware_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running DSiWare
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        First boot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="First boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-your-sd-card-should-look-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What your SD card should look like
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><img align="right" alt="AKMenu-Next" src="../../images/akmenu.png" width="200" /></p>
+<h1 id="installing-akmenu-next">Installing AKMenu-Next</h1>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><a href="https://github.com/coderkei/akmenu-next">AKMenu-Next</a> is an enhanced, actively developed take on the Acekard/Wood menu (forked from <a href="https://github.com/lifehackerhansol/akmenu4">akmenu4</a>) that runs Nintendo DS software &amp; homebrew through nds-bootstrap &amp; Pico-Loader. It adds DSiWare support, cheats, plugins, per-game settings and an upgraded theme system with game covers and music, while still supporting Acekard/Wood themes.
+For in-game controls such as soft-reset, see the <a href="https://wiki.ds-homebrew.com/nds-bootstrap/controls">nds-bootstrap controls page</a>.</p>
+</div>
+<p>Pick the tab for your setup below. Not sure which one you need? There's a table on the <a href="../../#which-version-do-i-need">home page</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Before you start</p>
+<ul>
+<li>You'll need <a href="https://www.7-zip.org/">7-Zip</a> (or any extractor that handles <code>.zip</code> and <code>.7z</code>).</li>
+<li>Use a decent, genuine SD card. A lot of "corrupted files" and "theme missing" problems turn out to be fake or dying cards, so if your card is new it's worth <a href="https://www.flashcarts.net/microsd-fakes#testing-a-microsd-card">testing it</a> first.</li>
+<li>All the paths in this guide are from the <strong>root</strong> of your SD card, i.e. the top level, not inside another folder.</li>
+</ul>
+</div>
+<h3 id="setup-guide">Setup Guide</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="flashcarts" name="__tabbed_1" type="radio" /><input id="dspico" name="__tabbed_1" type="radio" /><input id="nintendo-dsi" name="__tabbed_1" type="radio" /><input id="nintendo-3ds" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="flashcarts">Flashcarts</label><label for="dspico">DSpico</label><label for="nintendo-dsi">Nintendo DSi</label><label for="nintendo-3ds">Nintendo 3DS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h4 id="installing-akmenu-next-flashcart-edition">Installing AKMenu-Next Flashcart Edition</h4>
+<ol>
+<li>
+<p>Download the latest release of <a href="https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-flashcart.zip">AKMenu-Next Flashcart Edition</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>akmenu-next-flashcart.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+</li>
+<li>
+<p>Copy the following files/folders to the root of your SD card:</p>
+<ul>
+<li><code>_nds</code> folder</li>
+<li><code>_pico</code> folder</li>
+<li><code>BOOT.NDS</code></li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Already using TWiLight Menu++ or another menu?</p>
+<p>If there's already a <code>BOOT.NDS</code> on your SD card that something else relies on, rename the AKMenu-Next one (e.g. <code>akmenu-next.nds</code>) before copying it over, then launch it from your kernel.</p>
+</div>
+</li>
+</ol>
+<h4 id="installing-a-game-loader">Installing a game loader</h4>
+<p>AKMenu-Next doesn't run DS games by itself, it hands them off to a loader. You need <strong>at least one</strong> of these. You can install both and switch between them whenever you like, even per game.</p>
+<ul>
+<li><strong>Pico-Loader</strong> only supports certain flashcarts, but if yours is on the list it's a good choice.</li>
+<li><strong>nds-bootstrap</strong> works on pretty much any flashcart that can run homebrew. The Flashcart Edition uses nds-bootstrap by default.</li>
+</ul>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="pico-loader" name="__tabbed_2" type="radio" /><input id="nds-bootstrap" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="pico-loader">Pico-Loader</label><label for="nds-bootstrap">nds-bootstrap</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Using the wrong version of Pico-Loader could damage your flashcart!
+If you are unsure which version to use, check the <a href="https://github.com/LNH-team/pico-loader?tab=readme-ov-file#supported-platforms">Supported Platforms section</a>. If your flashcart isn't listed, use nds-bootstrap instead.</p>
+</div>
+<ol>
+<li>
+<p>Download the latest release of <a href="https://github.com/LNH-team/pico-loader/releases/latest">Pico-Loader</a>. Pick the zip that matches your flashcart, using the <a href="https://github.com/LNH-team/pico-loader#supported-platforms">Supported Platforms table</a> to work out which one that is.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>Pico_Loader_YOUR_FLASHCART_HERE.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+</li>
+<li>
+<p>Copy the <em>contents</em> of the zip into the <code>_pico</code> folder on your SD card (create it if it isn't there). When you're done, you should have <code>_pico/picoLoader7.bin</code> and <code>_pico/picoLoader9.bin</code>.</p>
+</li>
+<li>
+<p>Boot AKMenu-Next, press <code>START</code> and go to <code>Settings</code>. In the <code>Game loader settings</code> tab, change <code>Game Loader</code> to <code>Pico-Loader</code>, then press <code>A</code> and confirm to save.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Download the latest release of <a href="https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip">nds-bootstrap</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>nds-bootstrap.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+</li>
+<li>
+<p>Copy the <em>contents</em> of the zip into the <code>_nds</code> folder on your SD card. You should end up with files like <code>_nds/nds-bootstrap-release.nds</code> and <code>_nds/nds-bootstrap-hb-release.nds</code>.</p>
+</li>
+<li>
+<p>That's it, nds-bootstrap is already the default loader on the Flashcart Edition. If you've previously switched to Pico-Loader, press <code>START</code>, go to <code>Settings</code> &gt; <code>Game loader settings</code> and set <code>Game Loader</code> back to <code>nds-bootstrap</code>.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The first time you launch a game with nds-bootstrap you'll get a message about first-time setup. It creates a large <code>pagefile.sys</code> in <code>_nds</code>, which can take a minute. This only happens once.</p>
+</div>
+</div>
+</div>
+</div>
+<p>You can now launch <code>BOOT.NDS</code> from your flashcart's kernel, or set up autobooting below so you go straight into AKMenu-Next.</p>
+<h4 id="autobooting-akmenu-next">Autobooting AKMenu-Next</h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you can't find your flashcart in the <code>Autoboot</code> folder (check <code>Autoboot/README.txt</code> too, as a lot of clones share files), skip this section and just launch <code>BOOT.NDS</code> from your kernel. On some kernels you can make a copy of <code>BOOT.NDS</code> called <code>default.nds</code> to have it chainload automatically.</p>
+</div>
+<ol>
+<li>
+<p>Open the <code>Autoboot</code> folder in the AKMenu-Next files and find the folder that matches your flashcart.</p>
+</li>
+<li>
+<p>Copy the <em>contents</em> of that folder (not the folder itself) to the root of your SD card. Overwrite anything it asks about.</p>
+</li>
+<li>
+<p>If your flashcart is a DSTTi clone that needs extra boot files, look in the <code>Supplementary DSTTi Clone Files</code> folder. The <a href="https://www.flashcarts.net/ysmenu-compat-ext">YSMenu compatibility list</a> can tell you which file your cart wants. If it isn't there, make copies of <code>TTMenu.dat</code> from the <code>DSTT &amp; DSTTi</code> folder and rename them to whatever your cart needs.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Slot-1 carts that need DLDI patching</p>
+<p>Most kernels DLDI patch homebrew for you. A few, like the Games n' Music, or Slot-2 carts booted into NDS mode, might not. If AKMenu-Next can't see your SD card, DLDI patch <code>BOOT.NDS</code> with your cart's driver first.</p>
+</div>
+<h4 id="cheats-optional">Cheats (optional)</h4>
+<ol>
+<li>
+<p>Download a <a href="https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711">cheat database</a>.</p>
+</li>
+<li>
+<p>Copy <code>usrcheat.dat</code> from the download to <code>_nds/akmenunext/cheats/</code> on your SD card (create the <code>cheats</code> folder if it's missing).</p>
+</li>
+</ol>
+<p>See <a href="../using/#cheats">Using the Menu</a> for how to actually turn cheats on.</p>
+</div>
+<div class="tabbed-block">
+<h4 id="installing-akmenu-next-dspico-edition">Installing AKMenu-Next DSpico Edition</h4>
+<ol>
+<li>
+<p>Download the latest release of <a href="https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-pico.zip">AKMenu-Next DSpico Edition</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>akmenu-next-pico.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+</li>
+<li>
+<p>Copy the following files/folders to the root of your DSpico's SD card:</p>
+<ul>
+<li><code>_nds</code> folder</li>
+<li><code>_pico</code> folder</li>
+<li><code>BOOT.NDS</code></li>
+<li><code>_picoboot.nds</code> (only if you want to autoboot AKMenu-Next instead of Pico-Launcher)</li>
+</ul>
+</li>
+</ol>
+<h4 id="installing-pico-loader">Installing Pico-Loader</h4>
+<ol>
+<li>
+<p>Download the latest release of <a href="https://github.com/LNH-team/pico-loader/releases/latest/download/Pico_Loader_DSPICO.zip">Pico-Loader for DSpico</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>Pico_Loader_DSPICO.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+</li>
+<li>
+<p>Copy the <em>contents</em> of the zip into the <code>_pico</code> folder on your SD card. You should end up with <code>_pico/picoLoader7.bin</code> and <code>_pico/picoLoader9.bin</code>.</p>
+</li>
+<li>
+<p>You can now launch <code>BOOT.NDS</code> from Pico-Launcher. If you copied <code>_picoboot.nds</code>, the DSpico will boot straight into AKMenu-Next instead.</p>
+</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">nds-bootstrap installation (Optional)</p>
+<ol>
+<li>
+<p>Download the latest release of <a href="https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip">nds-bootstrap</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>nds-bootstrap.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+</li>
+<li>
+<p>Copy the <em>contents</em> of the zip into the <code>_nds</code> folder on your SD card.</p>
+</li>
+<li>
+<p>In AKMenu-Next, press <code>START</code> and go to <code>Settings</code>. Go to the <code>Game loader settings</code> tab and change <code>Game Loader</code> to <code>nds-bootstrap</code>. You can also leave the global setting on Pico-Loader and only switch individual games over (see <a href="../using/#per-game-settings">per-game settings</a>).</p>
+</li>
+</ol>
+</div>
+<h4 id="cheats-optional_1">Cheats (optional)</h4>
+<ol>
+<li>
+<p>Download a <a href="https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711">cheat database</a>.</p>
+</li>
+<li>
+<p>Copy <code>usrcheat.dat</code> from the download to <code>_nds/akmenunext/cheats/</code> on your SD card (create the <code>cheats</code> folder if it's missing).</p>
+</li>
+</ol>
+<p>See <a href="../using/#cheats">Using the Menu</a> for how to actually turn cheats on.</p>
+<h4 id="running-dsiware-dsi-3ds-only">Running DSiWare (DSi &amp; 3DS only)</h4>
+<p>The DSpico can run DSiWare when it's plugged into a DSi or 3DS. See <a href="../dsiware/#dspico">Running DSiWare</a>.</p>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This needs a modded Nintendo DSi. If yours isn't modded yet, follow <a href="https://dsi.cfw.guide">dsi.cfw.guide</a> first.</p>
+</div>
+<h4 id="installing-akmenu-next-nintendo-dsi-edition">Installing AKMenu-Next Nintendo DSi Edition</h4>
+<ol>
+<li>
+<p>Download the latest release of <a href="https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-dsi.zip">AKMenu-Next DSi Edition</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>akmenu-next-dsi.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you use TWiLight Menu++ and want to keep it alongside AKMenu-Next, <strong>don't</strong> copy over <code>BOOT.NDS</code>, as it'll overwrite the one TWiLight Menu++ uses.
+Launch <code>akmenu-next.dsi</code> from TWiLight Menu++ or Unlaunch instead.</p>
+</div>
+</li>
+<li>
+<p>Copy the following files/folders to the root of your SD card:</p>
+<ul>
+<li><code>_nds</code> folder</li>
+<li><code>BOOT.NDS</code> (read the warning above)</li>
+<li><code>akmenu-next.dsi</code></li>
+<li><code>title</code> folder (only if you use HiyaCFW)</li>
+</ul>
+</li>
+<li>
+<p>Download the latest release of <a href="https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip">nds-bootstrap</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>nds-bootstrap.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+</li>
+<li>
+<p>Copy the <em>contents</em> of the zip into the <code>_nds</code> folder on your SD card.</p>
+</li>
+<li>
+<p>Load <code>BOOT.NDS</code> with whatever entrypoint you use (e.g. Memory Pit, stylehax or Flipnote Lenny), or launch <code>akmenu-next.dsi</code> from Unlaunch or TWiLight Menu++. If you use HiyaCFW and copied the <code>title</code> folder, AKMenu-Next will show up on your home menu as an app.</p>
+</li>
+</ol>
+<h4 id="cheats-optional_2">Cheats (optional)</h4>
+<ol>
+<li>
+<p>Download a <a href="https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711">cheat database</a>.</p>
+</li>
+<li>
+<p>Copy <code>usrcheat.dat</code> from the download to <code>_nds/akmenunext/cheats/</code> on your SD card (create the <code>cheats</code> folder if it's missing).</p>
+</li>
+</ol>
+<p>See <a href="../using/#cheats">Using the Menu</a> for how to actually turn cheats on.</p>
+<h4 id="autobooting-akmenu-next_1">Autobooting AKMenu-Next</h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Autobooting AKMenu-Next on a DSi needs <a href="https://dsi.cfw.guide/installing-unlaunch.html">Unlaunch</a> or <a href="https://github.com/Vickerinox/Astronaut/releases/latest">Astronaut</a> installed.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="unlaunch-users" name="__tabbed_3" type="radio" /><input id="astronaut-users" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="unlaunch-users">Unlaunch Users</label><label for="astronaut-users">Astronaut Users</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Turn on your DSi while holding <code>A</code> and <code>B</code>.</p>
+</li>
+<li>
+<p>In the Unlaunch menu, go to <code>OPTIONS</code>.</p>
+</li>
+<li>
+<p>Set <code>NO BUTTON</code> (or a button of your choice) to the <code>akmenu-next</code> entry. The bottom screen should show <code>akmenu-next.dsi</code> when it's selected.</p>
+</li>
+<li>
+<p>Turn your DSi off and back on. It'll now boot straight into AKMenu-Next.</p>
+</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Turn on your DSi while holding <code>A</code> and <code>B</code>.</p>
+</li>
+<li>
+<p>In the Astronaut menu, go to <code>Settings</code>, then <code>Change Boot Options</code>.</p>
+</li>
+<li>
+<p>Select <code>default boot option</code> and choose <code>Launch something from SD</code>.</p>
+</li>
+<li>
+<p>Find <code>akmenu-next.dsi</code> on the SD card and select it.</p>
+</li>
+<li>
+<p>Press <code>go back</code> at the bottom, then <code>Save</code> on the previous screen.</p>
+</li>
+<li>
+<p>Turn your DSi off and back on. It'll now boot straight into AKMenu-Next.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<h4 id="running-dsiware">Running DSiWare</h4>
+<p>AKMenu-Next can launch DSiWare from your DSi's SD card. See <a href="../dsiware/#dsi-and-3ds-sd-card">Running DSiWare</a>.</p>
+</div>
+<div class="tabbed-block">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This needs a modded Nintendo 3DS. If yours isn't modded yet, follow <a href="https://3ds.hacks.guide">3ds.hacks.guide</a> first. Everything here works the same on the 2DS family, it's just called "3DS" below to keep things short.</p>
+</div>
+<h4 id="installing-akmenu-next-nintendo-3ds-edition">Installing AKMenu-Next Nintendo 3DS Edition</h4>
+<ol>
+<li>
+<p>Download the latest release of <a href="https://github.com/coderkei/akmenu-next/releases/latest/download/akmenu-next-3ds.zip">AKMenu-Next 3DS Edition</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>akmenu-next-3ds.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you use TWiLight Menu++ on your 3DS and want to keep it, <strong>don't</strong> copy over <code>BOOT.NDS</code>, as it'll overwrite the one TWiLight Menu++ uses. You don't need it anyway since you'll be launching AKMenu-Next from the home menu.</p>
+</div>
+</li>
+<li>
+<p>Copy the following files/folders to the root of your SD card:</p>
+<ul>
+<li><code>_nds</code> folder</li>
+<li><code>BOOT.NDS</code> (read the warning above)</li>
+<li><code>akmenu-next.cia</code></li>
+</ul>
+</li>
+<li>
+<p>Download the latest release of <a href="https://github.com/DS-Homebrew/nds-bootstrap/releases/latest/download/nds-bootstrap.zip">nds-bootstrap</a>.</p>
+</li>
+<li>
+<p>Extract the downloaded <code>nds-bootstrap.zip</code> file with <a href="https://www.7-zip.org/">7-Zip</a>.</p>
+</li>
+<li>
+<p>Copy the <em>contents</em> of the zip into the <code>_nds</code> folder on your SD card.</p>
+</li>
+<li>
+<p>Put the SD card back in your 3DS and turn it on. Open FBI, go to <code>SD</code>, find <code>akmenu-next.cia</code>, select it and choose <code>Install CIA</code>.</p>
+</li>
+<li>
+<p>Launch <code>akmenu-next</code> from the 3DS home menu.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If AKMenu-Next doesn't show up on the home menu after installing (or you're updating an older version), restart your 3DS.</p>
+</div>
+<p>Once it's installed you can delete <code>akmenu-next.cia</code> from your SD card if you want the space back.</p>
+<h4 id="cheats-optional_3">Cheats (optional)</h4>
+<ol>
+<li>
+<p>Download a <a href="https://gbatemp.net/threads/deadskullzjrs-nds-i-cheat-databases.488711">cheat database</a>.</p>
+</li>
+<li>
+<p>Copy <code>usrcheat.dat</code> from the download to <code>_nds/akmenunext/cheats/</code> on your SD card (create the <code>cheats</code> folder if it's missing).</p>
+</li>
+</ol>
+<p>See <a href="../using/#cheats">Using the Menu</a> for how to actually turn cheats on.</p>
+<h4 id="running-dsiware_1">Running DSiWare</h4>
+<p>AKMenu-Next can launch DSiWare from your 3DS's SD card through nds-bootstrap. See <a href="../dsiware/#dsi-and-3ds-sd-card">Running DSiWare</a>.</p>
+</div>
+</div>
+</div>
+<h2 id="first-boot">First boot</h2>
+<p>The first time AKMenu-Next starts, it'll ask you to pick a language. Choose one and it'll restart into the menu. You can change it later in the <code>System settings</code> tab of the settings menu.</p>
+<p>After that you'll see the top level of the file browser. What's listed depends on your setup:</p>
+<table>
+<thead>
+<tr>
+<th>Setup</th>
+<th>What you'll see</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Flashcart in a DS / DS Lite</td>
+<td>microSD Card, Favourites, Recently Played, Slot 2 Card</td>
+</tr>
+<tr>
+<td>Flashcart or DSpico in a DSi / 3DS</td>
+<td>microSD Card, DSi SD (if a card is in the console), Favourites, Recently Played, Slot 2 Card</td>
+</tr>
+<tr>
+<td>DSi / 3DS SD card</td>
+<td>DSi SD, Favourites, Recently Played, Slot 1 Card</td>
+</tr>
+</tbody>
+</table>
+<p>Head into your SD card, find a game and press <code>A</code>. Have a look at <a href="../using/">Using the Menu</a> for everything else.</p>
+<h3 id="what-your-sd-card-should-look-like">What your SD card should look like</h3>
+<p>Here's roughly what you'll have once everything is installed. You don't need to match it exactly, but if something isn't working it's a handy thing to compare against:</p>
+<div class="highlight"><pre><span></span><code>SD:/
+├── _nds/
+│   ├── akmenunext/            &lt;- AKMenu-Next's own files
+│   │   ├── cheats/usrcheat.dat
+│   │   ├── language/
+│   │   ├── plugins/
+│   │   ├── ui/                &lt;- themes go in here
+│   │   ├── globalsettings.ini &lt;- created on first boot
+│   │   └── launcher.nds
+│   ├── nds-bootstrap-release.nds
+│   ├── nds-bootstrap-hb-release.nds
+│   └── nds-bootstrap-nightly.nds (optional)
+├── _pico/                     &lt;- flashcart &amp; DSpico only
+│   ├── picoLoader7.bin
+│   └── picoLoader9.bin
+├── BOOT.NDS
+└── (your games, in whatever folders you like)
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Need help or want to chat about AKMenu-Next? Check out the <a href="https://gbatemp.net/threads/ds-i-3ds-akmenu-next-wood-frontend-for-nds-bootstrap-pico-loader.665743/">AKMenu-Next GBAtemp thread</a>.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Created and maintained by coderkei
+    </div>
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/coderkei" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "content.tooltips"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.a5f9d56c.min.js"></script>
+      
+    
+  </body>
+</html>
